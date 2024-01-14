@@ -43,3 +43,12 @@ body {
 .CommandBar h2 {
   margin-right: 1rem;
 }
+
+.Loading {
+  display: flex;
+  align-items: center;
+}
+
+.Loading p {
+  margin-right: 10px;
+}
