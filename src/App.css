@@ -5,15 +5,40 @@ body {
 
 #root {
   height: 100%;
-  color: #19323C;
 }
 
 .App {
   padding-left: 10px;
   padding-right: 10px;
   height: 100%;
-  background-color: #F3F7F0;
+  background-color: #0A2472;
+  color: #F7F7FF;
   display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('savantLogo.png');
+  background-position: left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 40%;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 35px;
+}
+
+.Underlined {
+  text-decoration: underline;
+  color: #EF476F;
 }
 
 .IntroBar {

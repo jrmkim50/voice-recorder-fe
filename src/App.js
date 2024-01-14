@@ -36,7 +36,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className='IntroBar'>
+      <h1 style={{ margin: 0 }}>Savant.AI</h1>
+      <h2 style={{ marginTop: 0 }}>Here to give you <span className='Underlined'>clarity</span>.</h2>
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <p style={{ marginRight: '10px', marginTop: 20, marginBottom: 20 }}>What do you need?</p>
+        <AudioRecorder 
+          onRecordingComplete={(blob) => processAudio(blob)}
+          recorderControls={recorderControls}
+        />
+      </div>
+      {/* <div className='IntroBar'>
         <h1>Savant.AI</h1>
         <h2>Here to give you clarity.</h2>
         <p>Just speak into the microphone</p>
@@ -61,7 +70,7 @@ function App() {
           />
         </div> }
         { data && <p>{data}</p>}
-      </div>
+      </div> */}
     </div>
   );
 }
