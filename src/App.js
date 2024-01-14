@@ -58,7 +58,7 @@ function App() {
             data-testid="loader"
           />
         </div> }
-      { data && <Typewriter text={data} delay={80}/>}
+      { data && <div className='Answer'><Typewriter text={data} delay={80}/></div>}
     </div>
   );
 }

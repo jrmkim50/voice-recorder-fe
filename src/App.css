@@ -49,3 +49,12 @@ p {
 .Loading p {
   margin-right: 10px;
 }
+
+.Answer {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  color: #0A2472;
+  background-color: #F7F7FF;
+  max-width: 50%;
+}
