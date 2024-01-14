@@ -1,6 +1,5 @@
 import './App.css';
 import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
-import emailFunny from './emailFunny.png'
 import { useState } from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -28,6 +27,9 @@ function App() {
       });
       const data_ = await response.json();
       setData(data_.text);
+      var msg = new SpeechSynthesisUtterance();
+      msg.text = data_.text;
+      window.speechSynthesis.speak(msg);
     } catch {
       setData('Oops! We could not process the audio.')
     }
@@ -45,32 +47,17 @@ function App() {
           recorderControls={recorderControls}
         />
       </div>
-      {/* <div className='IntroBar'>
-        <h1>Savant.AI</h1>
-        <h2>Here to give you clarity.</h2>
-        <p>Just speak into the microphone</p>
-        <img src={emailFunny} alt='funny cartoon of email'/>
-      </div>
-      <div className='CommandBar'>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <h2>What do you need?</h2>
-          <AudioRecorder 
-            onRecordingComplete={(blob) => processAudio(blob)}
-            recorderControls={recorderControls}
-          />
-        </div>
-        { loading && <div className='Loading'>
+      { loading && <div className='Loading'>
           <p>Processing</p>
           <ClipLoader
-            color="#19323C"
+            color="#F7F7FF"
             loading={true}
             size={28}
             aria-label="Loading Spinner"
             data-testid="loader"
           />
         </div> }
-        { data && <p>{data}</p>}
-      </div> */}
+      { data && <p>{data}</p>}
     </div>
   );
 }

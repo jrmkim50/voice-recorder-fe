@@ -18,10 +18,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('savantLogo.png');
-  background-position: left; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: 40%;
+  /* background-image: url('savantLogo.png'); */
+  /* background-position: left; */
+  /* background-repeat: no-repeat; */
+  /* background-size: 40%; */
 }
 
 h1 {
@@ -55,18 +55,6 @@ p {
   margin-top: auto !important;
   width: 300px;
   align-self: flex-end;
-}
-
-.CommandBar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.CommandBar h2 {
-  margin-right: 1rem;
 }
 
 .Loading {
