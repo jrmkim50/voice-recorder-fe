@@ -2,6 +2,7 @@ import './App.css';
 import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
 import { useState } from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
+import Typewriter from './Typewriter';
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -57,7 +58,7 @@ function App() {
             data-testid="loader"
           />
         </div> }
-      { data && <p>{data}</p>}
+      { data && <Typewriter text={data} delay={80}/>}
     </div>
   );
 }

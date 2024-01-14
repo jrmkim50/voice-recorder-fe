@@ -18,10 +18,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-image: url('savantLogo.png'); */
-  /* background-position: left; */
-  /* background-repeat: no-repeat; */
-  /* background-size: 40%; */
+  background-image: url('savantLogo.png');
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 30%;
 }
 
 h1 {
@@ -39,22 +39,6 @@ p {
 .Underlined {
   text-decoration: underline;
   color: #EF476F;
-}
-
-.IntroBar {
-  margin: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  color: #F3F7F0;
-  background-color: #A93F55;
-  display: flex;
-  flex-direction: column;
-}
-
-.IntroBar img {
-  margin-top: auto !important;
-  width: 300px;
-  align-self: flex-end;
 }
 
 .Loading {
