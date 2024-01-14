@@ -19,7 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url('savantLogo.png');
-  background-position: left;
+  background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 30%;
 }

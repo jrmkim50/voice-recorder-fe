@@ -40,7 +40,7 @@ function App() {
   return (
     <div className="App">
       <h1 style={{ margin: 0 }}>Savant.AI</h1>
-      <h2 style={{ marginTop: 0 }}>Here to give you <span className='Underlined'>clarity</span>.</h2>
+      <h2 style={{ marginTop: 0, marginBottom: 0 }}>Never <span className='Underlined'>forget a single fact</span> .</h2>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <p style={{ marginRight: '10px', marginTop: 20, marginBottom: 20 }}>What do you need?</p>
         <AudioRecorder 
