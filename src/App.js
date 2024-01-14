@@ -1,7 +1,11 @@
 import './App.css';
 import { AudioRecorder, useAudioRecorder } from 'react-audio-voice-recorder';
+import emailFunny from './emailFunny.png'
+import { useState } from 'react';
 
 function App() {
+  const [loading, setLoading] = useState(false);
+  
   const recorderControls = useAudioRecorder(
     {
       noiseSuppression: true,
@@ -10,7 +14,12 @@ function App() {
     (err) => console.table(err) // onNotAllowedOrFound
   );
 
-  const addAudioElement = (blob) => {
+  const processAudio = (blob) => {
+    let reader = new FileReader()
+    reader.onload = () => {
+      console.log(reader.result);
+    }
+    reader.readAsDataURL(blob);
     const url = URL.createObjectURL(blob);
     const audio = document.createElement("audio");
     audio.src = url;
@@ -21,16 +30,19 @@ function App() {
   return (
     <div className="App">
       <div className='IntroBar'>
-        <h1>Deep Email Search</h1>
+        <h1>Savant.AI</h1>
         <h2>Here to give you clarity.</h2>
         <p>Just speak into the microphone</p>
+        <img src={emailFunny} alt='funny cartoon of email'/>
       </div>
       <div className='CommandBar'>
-        <h2>What do you need?</h2>
-        <AudioRecorder 
-          onRecordingComplete={(blob) => addAudioElement(blob)}
-          recorderControls={recorderControls}
-        />
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <h2>What do you need?</h2>
+          <AudioRecorder 
+            onRecordingComplete={(blob) => processAudio(blob)}
+            recorderControls={recorderControls}
+          />
+        </div>
       </div>
     </div>
   );
